@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './Component/Header'
+import Slider from './Component/Slider'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +12,7 @@ function App() {
     <>
       <div className='bg-[#02051a] h-screen'>
         <Header/>
+        <Slider/>
       </div>
     </>
   )
