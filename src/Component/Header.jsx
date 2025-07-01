@@ -36,7 +36,7 @@ function Header() {
   return (
     <div className='flex  items-center justify-between p-5'>
       <div className='flex gap-9  items-center '>
-        <img src={logo} alt=" logo" className='w-[80px] md:w-[120px] object-cover ' />
+        <img src={logo} alt=" logo" className='w-[80px] md:w-[100px] object-cover ' />
         <div className=' gap-6 flex-wrap hidden md:flex items-center'>
           {
           menu.map((item, index) => {

@@ -18,12 +18,12 @@ function Slider() {
         })
     }
     const scrollLeft = (element) => {
-        element.scrollLeft-=screenWidth-130;
+        element.scrollLeft-=screenWidth-108;
         console.log(element.scrollLeft)
 
     };
     const scrollRight = (element) => {
-        element.scrollLeft+=screenWidth-130;
+        element.scrollLeft+=screenWidth -108;
         console.log(element.scrollRight)
     };
   return (
@@ -34,7 +34,9 @@ function Slider() {
     <div className='flex  overflow-x-auto px-16 py-5 scrollbar-hide scroll-smooth ' ref={eleRef}>
       {
         trendingData.map((item,index)=>{
+          { console.log(trendingData) }
             return trending&&(
+              
                 <img src={baseUrl + item.backdrop_path} alt="" key={index} className='object-left-top min-w-full md:h-[310px] object-cover
                  rounded-l mx-2 border-2 hover:border-gray-300 transition-all ease-in-out duration-150' />
 
