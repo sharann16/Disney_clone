@@ -43,10 +43,10 @@ function Production() {
     <div className='flex gap-2 md:gap-8 p-5 px-16 '>
       {productionData.map((item,index)=>{
         return(
-            <div className='p-2 border-2 shadow-2xl shadow-black border-gray-600 rounded-2xl hover:scale-105 transition-all duration-300 ease-in-out
+          <div key={item.id} className='p-2 border-2 shadow-2xl shadow-black border-gray-600 rounded-2xl hover:scale-105 transition-all duration-300 ease-in-out
             cursor-pointer relative group' >
-            <img src={item.image} alt="" key={index} className='w-full z-0' />
-            <video src={item.video} autoPlay loop playsInline className='absolute top-0 left-0 w-full h-full object-cover rounded-xl z-[-1] opacity-0 group-hover:opacity-[50%]'></video>
+            <img src={item.image} alt=""  className='w-full z-0' />
+            <video src={item.video}  autoPlay loop playsInline className='absolute top-0 left-0 w-full h-full object-cover rounded-xl z-[-1] opacity-0 group-hover:opacity-[50%]'></video>
 
             </div>
         )

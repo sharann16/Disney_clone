@@ -1,5 +1,5 @@
 import React, { use, useEffect, useRef, useState } from 'react'
-import getTrending from '../Service/GlobalApi'
+import api from '../Service/GlobalApi'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
 
 function Slider() {
@@ -12,19 +12,16 @@ function Slider() {
     },[])
 
     const trending = ()=>{
-        getTrending.then((res)=>{
-            console.log(res.data.results)
+        api.getTrending().then((res)=>{
             setTrendingData(res.data.results)
         })
     }
     const scrollLeft = (element) => {
         element.scrollLeft-=screenWidth-108;
-        console.log(element.scrollLeft)
 
     };
     const scrollRight = (element) => {
         element.scrollLeft+=screenWidth -108;
-        console.log(element.scrollRight)
     };
   return (
     <div>
@@ -34,7 +31,6 @@ function Slider() {
     <div className='flex  overflow-x-auto px-16 py-5 scrollbar-hide scroll-smooth ' ref={eleRef}>
       {
         trendingData.map((item,index)=>{
-          { console.log(trendingData) }
             return trending&&(
               
                 <img src={baseUrl + item.backdrop_path} alt="" key={index} className='object-left-top min-w-full md:h-[310px] object-cover
